@@ -1,0 +1,14 @@
+﻿@page
+@model FizzBuzzWeb.Pages.SavedInSessionModel
+@{
+    ViewData["Title"] = "Data in session";
+}
+<h1 class="display-4">Dane zapisane w sesji</h1>
+@if (Model.Lista != null)
+{
+    <ul class="list-group list-group-flush">
+        @foreach(string[] wiersz in Model.Lista){
+            <li class="list-group-item">@wiersz[0], @wiersz[1] - rok @wiersz[2] przestępny</li>
+        }
+    </ul>
+}
